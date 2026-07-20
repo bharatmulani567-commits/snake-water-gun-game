@@ -1,10 +1,11 @@
+
 import random
 '''
 1 for snake
 -1 for water
 0 for gun
-
 '''
+
 computer = random.choice([-1 ,0 ,1])
 youstr = input("Enter your choice: ")
 youDict = {"s" : 1 , "w" : -1 , "g" : 0}
@@ -20,23 +21,33 @@ if(computer==you):
     print("Its a draw")
 
 else:
-    if(computer == -1 and you == 1):
+    '''   
+    if(computer == -1 and you == 1): -2
         print("YOU WIN !")
 
-    elif(computer == -1 and you == 0):
+    elif(computer == -1 and you == 0): -1
         print("YOU LOSE !")
 
-    elif(computer == 1 and you == -1):
+    elif(computer == 1 and you == -1): 2 
         print("YOU LOSE !")
 
-    elif(computer == 1 and you == 0):
+    elif(computer == 1 and you == 0): 1
         print("YOU WIN !")
 
-    elif(computer == 0 and you == -1):
+    elif(computer == 0 and you == -1): 1 
         print("YOU WIN !")
 
-    elif(computer == 0 and you == 1):
+    elif(computer == 0 and you == 1): -1
         print("YOU LOSE !")
 
     else:
         print("Something went wrong")    
+
+
+    '''    
+
+if((computer - you) == -1 or (computer - you) == 2):
+    print("YOU LOSE !")
+
+elif((computer - you) == 1 or (computer - you) == -2):
+    print("YOU WIN !")
